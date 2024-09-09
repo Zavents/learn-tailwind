@@ -83,22 +83,138 @@
 </div>
 </div>
   
-    <!-- MAIN PAGE -->
-    <div class="container py-40 max-w-screen-xl px-8 md:px-6 lg:px-8 flex justify-center items-center mx-auto lg:grid lg:grid-cols-12">
-      <div class="mr-auto place-self-center lg:col-span-7">
-        <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold">Let's Learn HTML<br>
-          <span class="text-blue-300 font-extrabold lg:text-7xl md:text-6xl text-5xl ">Tailwind.</span></h1> <!-- Updated text color -->
-        <p class="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl"><span class="text-blue-300">Tailwind CSS</span> is a utility-first CSS framework that allows developers to build custom designs quickly by composing pre-defined classes.</p> <!-- Updated paragraph text color -->
-        <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-blue-300 rounded-lg hover:bg-blue-300 hover:text-gray-900 focus:ring-4 focus:ring-blue-500">
-          Get Started
-        </a> 
-      </div>
-      <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-        <img src="./public/assets/header-gambar.svg" alt="">
+<!-- MAIN PAGE -->
+<div class="container py-40 max-w-screen-xl px-8 md:px-6 lg:px-8 flex justify-center items-center mx-auto lg:grid lg:grid-cols-12">
+  <div class="mr-auto place-self-center lg:col-span-7">
+    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold">Let's Learn HTML<br>
+      <span class="text-blue-300 font-extrabold lg:text-7xl md:text-6xl text-5xl ">Tailwind.</span></h1> <!-- Updated text color -->
+    <p class="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl"><span class="text-blue-300">Tailwind CSS</span> is a utility-first CSS framework that allows developers to build custom designs quickly by composing pre-defined classes.</p> <!-- Updated paragraph text color -->
+    <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-blue-300 rounded-lg hover:bg-blue-300 hover:text-gray-900 focus:ring-4 focus:ring-blue-500">
+      Get Started
+    </a> 
+  </div>
+  <div class="hidden lg:mt-0 md:col-span-5 md:flex lg:col-span-5 lg:flex">
+    <img src="./public/assets/header-gambar.svg" alt="">
+  </div>
+</div>
+</section>
+<!-- MAIN PAGE -->
+
+<!-- collums -->
+  <section class="flex justify-center items-center min-h-screen">
+    <div class="container py-40 max-w-screen-xl mx-auto text-center">
+  
+      <!-- Title and Description -->
+      <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+        Columns <br>
+      </h1>
+      <p class="max-w-5xl mb-8 text-lg text-gray-300 mx-auto">
+        This section demonstrates how Tailwind's responsive grid system works. Each row is divided into 12 columns by default, and you can control the width of each column using the <code>col-span</code> class. This allows for precise control over how much space each element should take up.
+      </p>
+  
+      <!-- Grid Content -->
+      <div class="place-self-center">
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div class="bg-blue-500 p-4 text-white">Item 1</div>
+          <div class="bg-blue-500 p-4 text-white">Item 2</div>
+          <div class="bg-blue-500 p-4 text-white">Item 3</div>
+          <div class="bg-blue-500 p-4 text-white">Item 4</div>
+        </div>
+        <p class="max-w-5xl mb-2 text-lg text-gray-100 mx-auto">
+          For this case, I use <code>grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4</code> in Tailwind CSS. This means:
+          <ul class=" text-left list-disc pl-6">
+            <li class="  mb-2 text-sm text-gray-100">It will show 4 items per row on screens larger than 1280px (xl breakpoint).</li>
+            <li class="  mb-2 text-sm text-gray-100">It will show 2 items per row on screens larger than 768px (md breakpoint).</li>
+            <li class="  mb-2 text-sm text-gray-100">It will show 1 item per row on screens larger than 640px (sm breakpoint).</li>
+            <li class="  mb-2 text-sm text-gray-100">On screens smaller than 640px, it will also show 1 item per row.</li>
+          </ul>
+        </p>
+        
+        <p class="max-w-5xl mb-2 text-lg text-gray-300 mx-auto">
+          In comparison, Bootstrap's grid system can be achieved using <code>col-12 col-md-6 col-xl-3</code>.
+        </p>
+        
+        <br>
+        <p class="max-w-5xl mb-2 text-lg text-gray-300 mx-auto">
+          <code>grid grid-cols-12 </code> you can change hows the <code>cols</code> works by changing <code>col-span</code> nor <code>grid-cols</code> as you want
+        </p>
+        <!-- First Row -->
+        <div class="grid grid-cols-12 gap-1">
+          <div class="col-span-4 border-2 border-white bg-blue-600 bg-opacity-80 p-4">
+            grid
+          </div>
+          <div class="col-span-4 border-2 border-white bg-purple-800 bg-opacity-80 p-4">
+            col-span-4
+          </div>
+          <div class="col-span-4 border-2 border-white bg-blue-600 bg-opacity-80 p-4">
+            Column
+          </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="grid grid-cols-12 gap-1 my-2">
+          <div class="col-span-1 border-2 border-white bg-blue-500 bg-opacity-80 p-4">
+            1
+          </div>
+          <div class="col-span-11 border-2 border-white bg-purple-900 bg-opacity-80 p-4">
+            col-span-11
+          </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="grid grid-cols-12 gap-1 my-2">
+          <div class="col-span-2 border-2 border-white bg-blue-400 bg-opacity-80 p-4">
+            2
+          </div>
+          <div class="col-span-10 border-2 border-white bg-purple-600 bg-opacity-80 p-4">
+            col-span-10
+          </div>
+        </div>
+
+        <!-- Fourth Row -->
+        <div class="grid grid-cols-12 gap-1 my-2">
+          <div class="col-span-3 border-2 border-white bg-blue-400 bg-opacity-80 p-4">
+            3
+          </div>
+          <div class="col-span-9 border-2 border-white bg-purple-500 bg-opacity-80 p-4">
+            col-span-9
+          </div>
+        </div>
+
+        <!-- Fifth Row -->
+        <div class="grid grid-cols-12 gap-1 my-2">
+          <div class="col-span-4 border-2 border-white bg-blue-400 bg-opacity-80 p-4">
+           4
+          </div>
+          <div class="col-span-8 border-2 border-white bg-purple-400 bg-opacity-80 p-4">
+            col-span-10
+          </div>
+        </div>
+
+        <!-- Sixth Row -->
+        <div class="grid grid-cols-12 gap-1 my-2">
+          <div class="col-span-5 border-2 border-white bg-blue-400 bg-opacity-80 p-4">
+            col-5
+          </div>
+          <div class="col-span-7 border-2 border-white bg-purple-400 bg-opacity-80 p-4">
+            col-7
+          </div>
+        </div>
+
+        <!-- Seventh Row -->
+        <div class="grid grid-cols-12 gap-1 my-2">
+          <div class="col-span-6 border-2 border-white bg-blue-300 bg-opacity-80 p-4">
+            col-6
+          </div>
+          <div class="col-span-6 border-2 border-white bg-purple-300 bg-opacity-80 p-4">
+            col-6
+          </div>
+        </div>
       </div>
     </div>
-  
-  </section>  </section>
+  </div>
+  </section>
+<!-- collums -->
 
 
    <!-- Tailwind CSS -->
