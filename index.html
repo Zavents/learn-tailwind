@@ -67,10 +67,11 @@
         x-transition:leave-start="opacity-100 transform translate-y-0"
         x-transition:leave-end="opacity-0 transform -translate-y-4"
         class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-blue-400 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="#">Home</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-blue-400 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="#accordion">Home</a>
     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="#">Components</a>
     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="#">Documents</a>
     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+    
 
     <div @click.away="open = false" class="relative" x-data="{ open: false }">
       <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline">
@@ -211,8 +212,8 @@
   </section>
 <!-- collums -->
 
-<section class="flex justify-center items-center min-h-screen">
-  <div class="container py-40 max-w-screen-xl mx-auto text-center grid grid-cols-1">
+<section class="flex justify-center items-center min-h-3">
+  <div class="container max-w-screen-xl mx-auto text-center grid grid-cols-1">
     <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       Layout Justify <br>
     </h1>
@@ -267,9 +268,235 @@
   </div>
 </section>
 
+<section class="flex justify-center items-center min-h-screen" id="accordion">
+  <div class="container max-w-screen-xl mx-auto text-center grid grid-cols-1">
+    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+      Accordion <br>
+    </h1>
+      <!-- Accordion Item 1 -->
+    <div class="border-b border-slate-200">
+      <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-white">
+        <span>What is Material Tailwind?</span>
+        <span id="icon-1" class="text-white transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+          </svg>
+        </span>
+      </button>
+      <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="pb-5 text-sm text-white">
+          Material Tailwind is a framework that enhances Tailwind CSS with additional styles and components.
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion Item 2 -->
+    <div class="border-b border-white">
+      <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-white">
+        <span>How to use Material Tailwind?</span>
+        <span id="icon-2" class="text-white transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+          </svg>
+        </span>
+      </button>
+      <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="pb-5 text-sm text-white">
+          You can use Material Tailwind by importing its components into your Tailwind CSS project.
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion Item 3 -->
+    <div class="border-b border-white">
+      <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-white">
+        <span>What can I do with Material Tailwind?</span>
+        <span id="icon-3" class="text-white transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+          </svg>
+        </span>
+      </button>
+      <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="pb-5 text-sm text-white">
+          Material Tailwind allows you to quickly build modern, responsive websites with a focus on design.
+        </div>
+      </div>
+    </div>
+
+    <div class="border-b border-slate-200">
+      <button disabled onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-400 cursor-not-allowed">
+        <span>is PHP better than JS ?</span>
+        <span id="icon-1" class="text-slate-400 transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+          </svg>
+        </span>
+      </button>
+      <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="pb-5 text-sm text-slate-500">
+          no its not.
+        </div>
+      </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <!-- bbutton -->
+    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+      Alert <br>
+    </h1>
+    <button onclick="showAlert()" class="w-auto flex items-center justify-center px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 active:bg-blue-800">
+      Alert Button
+    </button>
+    <div
+      role="alert"
+      class="mt-3 relative flex w-full p-3 text-sm text-white bg-slate-800 rounded-md hidden"
+      id="alert"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+      </svg>
+      Sorry, something went wrong please try again.
+      <button onclick="closeAlert()" class="flex items-center justify-center transition-all px-2 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+        Close
+      </button>
+    </div>
+    <button onclick="showRequirementAlert()" class="w-auto mt-5 flex items-center justify-center px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-700 active:bg-green-800">
+      Show Requirements
+    </button>
+    <div
+      role="alert"
+      class="mt-3 relative flex flex-col w-full p-3 text-sm text-white bg-slate-800 rounded-md hidden"
+      id="requirementAlert"
+    >
+      <p class="flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path>
+        </svg>
+        Ensure that these requirements are met:
+      </p>
+      <ul class="mt-2 ml-7 list-inside list-disc">
+        <li>At least 10 characters (and up to 100 characters)</li>
+        <li>At least one lowercase character</li>
+        <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+      </ul>
+      <button onclick="closeRequirementAlert()" class="flex items-center justify-center transition-all px-2 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+        Close
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<section class="flex justify-center items-center min-h-screen">
+  <div class="container py-40 max-w-screen-xl mx-auto text-center">
+    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+      Card <br>
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <article class="rounded-xl border border-gray-700 bg-gray-800 p-4 hover:shadow-lg hover:shadow-pink-600 hover:border-pink-600 transition duration-300 ease-in-out">
+        <div class="flex items-center gap-4">
+          <img
+            alt=""
+            src="./public/assets/icon/zavents-logo-new.png"
+            loading="lazy"
+            class="size-16 rounded-full object-cover border-2 border-transparent hover:border-white transition ease-in-out duration-100"
+          />
+      
+          <div>
+            <h3 class="text-lg font-medium text-white">Zavents</h3>
+      
+            <div class="flow-root">
+              <ul class="-m-1 flex flex-wrap">
+                <li class="p-1 leading-none">
+                  <a href="https://x.com/wildanzv" target="_blank" class="text-xs font-medium text-gray-300"> Twitter </a>
+                </li>
+      
+                <li class="p-1 leading-none">
+                  <a href="https://github.com/zavents" target="_blank" class="text-xs font-medium text-gray-300"> GitHub </a>
+                </li>
+      
+                <li class="p-1 leading-none">
+                  <a href="https://magang.webby.digital/wildan/portofolio/" target="_blank" class="text-xs font-medium text-gray-300">Website</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <ul class="mt-4 space-y-2">
+          <li>
+            <a href="https://rawkuma.com" target="_blank" class="block h-full rounded-lg border border-gray-700 p-4 hover:shadow-lg hover:shadow-pink-600 hover:border-pink-600 transition duration-300 ease-in-out">
+              <strong class="font-medium text-white">Rawkuma.com</strong>
+      
+              <p class="mt-1 text-xs font-medium text-gray-300">
+                A free manga reading website that provides both official rips and raws.
+              </p>
+            </a>
+          </li>
+      
+          <li>
+            <a href="https://retsu.org" target="_blank" class="block h-full rounded-lg border border-gray-700 p-4 hover:shadow-lg hover:shadow-pink-600 hover:border-pink-600 transition duration-300 ease-in-out">
+              <strong class="font-medium text-white">Retsu.org</strong>
+      
+              <p class="mt-1 text-xs font-medium text-gray-300">
+                A free website for manga that provides English translations and is completely ad-free.
+              </p>
+            </a>
+          </li>
+        </ul>
+      </article>
+
+      <div class="grid-items">
+        <a href="#" class="group relative block bg-black">
+          <img alt="" 
+          src="./public/assets/card.jpg"
+          loading="lazy" 
+          class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 group-hover:blur-sm">
+          <div class="relative p-4 sm:p-6 lg:p-8">
+            <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Developer</p>
+            <p class="text-xl font-bold text-white sm:text-2xl">Wildan "Zavents" </p>
+            <div class="mt-32 sm:mt-48 lg:mt-64">
+              <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                <p class="text-sm text-white">
+                  Currently is a Vocational High School student,majoring in software engineering at SMK Negeri 2 Pekanbaru
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="grid-items">
+        <a href="https://rawkuma.com" target="_blank" class="group relative block h-64 sm:h-80 lg:h-96">
+          <span class="absolute inset-0 border-2 border-dashed border-white"></span>
+          <div class="relative flex h-full transform items-end border-2 border-white bg-indigo-900 transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+            <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-10 sm:size-12" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+              <h2 class="mt-4 text-xl font-medium sm:text-2xl text-white ">Rawkuma.com</h2>
+            </div>
+            <div class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+              <h3 class="mt-4 text-xl font-medium sm:text-2xl text-white ">Rawkuma</h3>
+              <p class="mt-4 text-sm sm:text-base text-white ">
+                A free manga reading website that provides both official rips and raws.
+              </p>
+              <p class="mt-8 font-bold text-white">Managing</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="./public/js/scripts.js"></script>
    <!-- Tailwind CSS -->
    <script src="./public/js/tailwind.js"></script>
    <!-- Alpine.js -->
-   <script defer src="./public/js/alpinejs@3.12.0.min.js"></script>
+   <script defer src="./public/js/alpinejs@3.12.0.min.js"></script>\
 </body>
 </html>
