@@ -548,7 +548,6 @@ input[type="checkbox"]:checked::after {
 </section>
 
 <!-- carousel -->
- 
 <section class="flex justify-center items-center min-h-screen ">
   <div class="container py-20 md:py-40 max-w-screen-xl mx-auto text-center">
     <h1 class="max-w-2xl mb-4 text-3xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
@@ -638,7 +637,7 @@ input[type="checkbox"]:checked::after {
 
 <!-- form -->
 <section class="flex justify-center items-center min-h-screen">
-  <div class="container py-40 max-w-screen-xl mx-auto text-center">
+  <div class="container py-40 max-w-screen-xl  text-center">
     <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       form  <br>
     </h1>
@@ -776,12 +775,216 @@ input[type="checkbox"]:checked::after {
 
 
 
-
-
-
-
-
-
+<section class="flex justify-center items-center min-h-screen">
+  <div class="container py-40 max-w-screen-xl mx-auto text-center">
+    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+      Dialog  <br>
+    </h1>
+    <div class="grid md:grid-cols-3 gap-5 max-w-12xl ">
+      <button
+      class="select-none rounded-lg bg-green-500 py-3 px-6 text-center align-middle  my-20  text-xs font-bold uppercase text-black shadow-md shadow-gray-800 transition-all hover:shadow-lg hover:shadow-gray-500 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      type="button" data-dialog-target="sign-in-dialog">
+      Sign In
+    </button>
+    <div data-dialog-backdrop="sign-in-dialog" data-dialog-backdrop-close="true"
+      class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+      <div data-dialog="sign-in-dialog"
+        class="relative mx-auto flex w-full max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+       
+        <div class="flex flex-col gap-4 p-6">
+          <h4
+            class="block  text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+            Sign In
+          </h4>
+          <p class="block mb-3  text-base antialiased font-normal leading-relaxed text-gray-700">
+            Enter your email and password to Sign In.
+          </p>
+          <h6
+            class="block -mb-2  text-base antialiased font-semibold leading-relaxed tracking-normal text-inherit">
+            Your Email
+          </h6>
+          <div class="relative h-11 w-full min-w-[200px]">
+            <input
+              class="w-full h-full px-3 py-3  text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder=" " />
+            <label
+              class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+              Email
+            </label>
+          </div>
+          <h6
+            class="block -mb-2  text-base antialiased font-semibold leading-relaxed tracking-normal text-inherit">
+            Your Password
+          </h6>
+          <div class="relative h-11 w-full min-w-[200px]">
+            <input
+              class="w-full h-full px-3 py-3  text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder=" " />
+            <label
+              class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+              Password
+            </label>
+          </div>
+            <div class="-ml-2.5 -mt-3">
+              <div class="inline-flex items-center">
+                <label class="relative flex items-center p-3 rounded-full cursor-pointer" htmlFor="remember">
+                  <input type="checkbox"
+                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:bg-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
+                    id="remember" />
+                  <span
+                    class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+                      stroke="currentColor" stroke-width="1">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </label>
+                <label class="mt-px font-light text-gray-700 cursor-pointer select-none" htmlFor="remember">
+                  Remember Me
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button
+              class="block w-full select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-3 px-6 text-center align-middle  text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              type="button">
+              Sign In
+            </button>
+            <p class="flex justify-center mt-4  text-sm antialiased font-light leading-normal text-inherit">
+              Don&apos;t have an account?
+              <a href="#signup"
+                class="block ml-1  text-sm antialiased font-bold leading-normal text-blue-gray-900">
+                Sign up
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>  
+      <button
+        class=" my-20 select-none rounded-lg bg-gradient-to-tr from-teal-900 to-teal-400 py-3 px-6 text-center align-middle  text-xs font-bold uppercase text-white shadow-md shadow-teal-600 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        data-ripple-light="true" data-dialog-target="animated-dialog">
+        Open Dialog
+      </button>
+      <div data-dialog-backdrop="animated-dialog" data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+        <div data-dialog="animated-dialog" data-dialog-mount="opacity-100 translate-y-0 scale-100"
+          data-dialog-unmount="opacity-0 -translate-y-28 scale-90 pointer-events-none"
+          data-dialog-transition="transition-all duration-300"
+          class="relative m-4 w-2/5 min-w-[40%] max-w-[40%] rounded-lg bg-white  text-base font-light leading-relaxed text-blue-gray-500 antialiased shadow-2xl">
+          <div
+            class="flex items-center p-4  text-2xl antialiased font-semibold leading-snug shrink-0 text-blue-gray-900">
+            Its a simple dialog.
+          </div>
+          <div
+            class="relative p-4  text-base antialiased font-light leading-relaxed border-t border-b border-t-blue-gray-100 border-b-blue-gray-100 text-blue-gray-500">
+            The key to more success is to have a lot of pillows. Put it this
+            way, it took me twenty five years to get these plants, twenty five
+            years of blood sweat and tears, and I&apos;m never giving up,
+            I&apos;m just getting started. I&apos;m up to something. Fan luv.
+          </div>
+          <div class="flex flex-wrap items-center justify-end p-4 shrink-0 text-blue-gray-500">
+            <button data-ripple-dark="true" data-dialog-close="true"
+              class="px-6 py-3 mr-1  text-xs font-bold text-red-500 uppercase transition-all rounded-lg middle none center hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+              Cancel
+            </button>
+            <button data-ripple-light="true" data-dialog-close="true"
+              class="middle none center rounded-lg bg-gradient-to-tr from-green-600 to-green-400 py-3 px-6  text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto my-20 select-none  py-3 px-6 text-center align-middle  text-xs font-bold uppercase text-white  hover:shadow-gray-900/20 active:opacity-[0.85]  disabled:opacity-50 disabled:shadow-none cursor-pointer " data-dialog-target="image-dialog">
+        <img alt="nature" class="object-cover object-center shadow-md hover:shadow-white"
+          src="./public/assets/banner2.jpg" width="350px"/>
+      </div>
+      <div data-dialog-backdrop="image-dialog" data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+        <div
+          class="relative m-4 w-3/4 min-w-[75%] max-w-[75%] rounded-lg bg-white  text-base font-light leading-relaxed text-blue-gray-500 antialiased shadow-2xl"
+          role="dialog" data-dialog="image-dialog">
+          <div
+            class="flex items-center justify-between p-4  text-2xl antialiased font-semibold leading-snug shrink-0 text-blue-gray-900">
+            <div class="flex items-center gap-3">
+              <img alt="Zavents"
+              loading="lazy"
+                src="./public/assets/icon/zavents-logo-new.png"
+                class="relative inline-block object-cover object-center rounded-full h-9 w-9" />
+              <div class="flex flex-col -mt-px">
+                <p class="block  text-sm antialiased font-medium leading-normal text-blue-gray-900">
+                  Wildan "Zavents"
+                </p>
+                <p class="block  text-xs antialiased font-normal text-gray-700">
+                  @Zavents
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                class="relative h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-lg text-center align-middle  text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button" data-ripple-dark="true">
+                <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                    class="w-5 h-5">
+                    <path
+                      d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z">
+                    </path>
+                  </svg>
+                </span>
+              </button>
+              <button
+                class="select-none rounded-lg bg-gray-900 py-2 px-4 text-center align-middle  text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button" data-ripple-light="true">
+                Free Download
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative p-0  text-base antialiased font-light leading-relaxed border-t border-b border-t-blue-gray-100  shadow-md shadow-black border-b-blue-gray-100 text-blue-gray-500">
+            <img alt="nature" class="h-[48rem] w-full object-cover object-center"
+              src="./public/assets/banner1.jpg" loading="lazy"/>
+              <div class="absolute inset-0 bg-gradient-to-r from-blue-300 via-blue-300 to-blue-300 opacity-50"></div>
+            
+          </div>
+          <div class="flex flex-wrap items-center justify-between p-4 shrink-0 text-blue-gray-500">
+            <div class="flex items-center gap-16">
+              <div>
+                <p class="block  text-sm antialiased font-normal leading-normal text-gray-700">
+                  Views
+                </p>
+                <p class="block  text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+                  44,082,044
+                </p>
+              </div>
+              <div>
+                <p class="block  text-sm antialiased font-normal leading-normal text-gray-700">
+                  Downloads
+                </p>
+                <p class="block  text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+                  553,031
+                </p>
+              </div>
+            </div>
+            <button
+              class="flex select-none items-center gap-3 rounded-lg border border-blue-gray-500 py-2 px-4 text-center align-middle  text-xs font-bold uppercase text-blue-gray-500 transition-all hover:opacity-75 focus:ring focus:ring-blue-gray-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              type="button" data-ripple-dark="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                class="w-4 h-4">
+                <path fill-rule="evenodd"
+                  d="M15.75 4.5a3 3 0 11.825 2.066l-8.421 4.679a3.002 3.002 0 010 1.51l8.421 4.679a3 3 0 11-.729 1.31l-8.421-4.678a3 3 0 110-4.132l8.421-4.679a3 3 0 01-.096-.755z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Share
+            </button>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</section>
 
 
 
@@ -852,8 +1055,10 @@ input[type="checkbox"]:checked::after {
   </div>
   </footer>
 <script src="./public/js/scripts.js"></script>
-   <!-- Tailwind CSS -->
+   <!-- Tailwind js -->
    <script src="./public/js/tailwind.js"></script>
+      <!-- dialog  js -->
+      <script src="./public/js/dialog.js"></script>
    <!-- Alpine.js -->
    <script defer src="./public/js/alpinejs@3.12.0.min.js"></script>
 </body>
