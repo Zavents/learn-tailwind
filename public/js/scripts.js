@@ -100,3 +100,24 @@ var swiper = new Swiper(".default-carousel", {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll("[role='tab']");
+  const tabPanels = document.querySelectorAll("[role='tabpanel']");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      // Remove active states
+      tabs.forEach(t => t.setAttribute("aria-selected", "false"));
+      tabPanels.forEach(panel => {
+        panel.classList.add("hidden");
+        panel.classList.remove("block");
+      });
+
+      // Add active state to the clicked tab
+      tab.setAttribute("aria-selected", "true");
+      const targetPanel = document.querySelector(tab.getAttribute("data-tab-target"));
+      targetPanel.classList.remove("hidden");
+      targetPanel.classList.add("block");
+    });
+  });
+});
