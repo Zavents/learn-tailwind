@@ -92,7 +92,7 @@ input[type="checkbox"]:checked::after {
     <div x-data="{ open: false }" class="flex flex-col px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 xl:px-12 bg-blue-900/50 backdrop-blur-md"> 
     
       <div class="p-4 md:p-0 md:py-6 flex flex-row items-center justify-between">
-        <a href="#" ><img loading="lazy" src="./public/assets/icon/loogo.png" width="70px" alt=""></a>
+        <a href="javascript:void(0)" ><img loading="lazy" src="./public/assets/icon/loogo.png" width="70px" alt=""></a>
         <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
             <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -109,10 +109,10 @@ input[type="checkbox"]:checked::after {
         x-transition:leave-start="opacity-100 transform translate-y-0"
         x-transition:leave-end="opacity-0 transform -translate-y-4"
         class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-blue-400 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="#accordion">Home</a>
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="#">Components</a>
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="#">Documents</a>
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-blue-400 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="javascript:void(0)accordion">Home</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="javascript:void(0)">Components</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="javascript:void(0)">Documents</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="javascript:void(0)">Contact</a>
     
 
     <div @click.away="open = false" class="relative" x-data="{ open: false }">
@@ -124,9 +124,9 @@ input[type="checkbox"]:checked::after {
       </button>
       <div x-show="open" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
         <div class="px-2 py-2 text-gray-900 bg-white rounded-md shadow">
-          <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="#">Link #1</a>
-          <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="#">Link #2</a>
-          <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="#">Link #3</a>
+          <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="javascript:void(0)">Link #1</a>
+          <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="javascript:void(0)">Link #2</a>
+          <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="javascript:void(0)">Link #3</a>
         </div>
       </div>
     </div>
@@ -137,10 +137,10 @@ input[type="checkbox"]:checked::after {
 <!-- MAIN PAGE -->
 <div class="container py-40 max-w-screen-xl px-8 md:px-6 lg:px-8 flex justify-center items-center mx-auto lg:grid lg:grid-cols-12">
   <div class="mr-auto place-self-center lg:col-span-7">
-    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold">Let's Learn HTML<br>
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold">Let's Learn HTML<br>
       <span class="text-blue-300 font-extrabold lg:text-7xl md:text-6xl text-5xl ">Tailwind.</span></h1> <!-- Updated text color -->
     <p class="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl"><span class="text-blue-300">Tailwind CSS</span> is a utility-first CSS framework that allows developers to build custom designs quickly by composing pre-defined classes.</p> <!-- Updated paragraph text color -->
-    <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-blue-300 rounded-lg hover:bg-blue-300 hover:text-gray-900 focus:ring-4 focus:ring-blue-500">
+    <a href="javascript:void(0)" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-blue-300 rounded-lg hover:bg-blue-300 hover:text-gray-900 focus:ring-4 focus:ring-blue-500">
       Get Started
     </a> 
   </div>
@@ -155,7 +155,7 @@ input[type="checkbox"]:checked::after {
   <section class="flex justify-center items-center min-h-screen">
     <div class="container py-40 max-w-screen-xl mx-auto text-center">
   
-      <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+      <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
         Columns <br>
       </h1>
       <div class="place-self-center">
@@ -256,7 +256,7 @@ input[type="checkbox"]:checked::after {
 
 <section class="flex justify-center items-center min-h-3">
   <div class="container max-w-screen-xl mx-auto text-center grid grid-cols-1">
-    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       Layout Justify <br>
     </h1>
     <div class="flex mb-4 justify-start">
@@ -312,7 +312,7 @@ input[type="checkbox"]:checked::after {
 
 <section class="flex justify-center items-center min-h-screen" id="accordion">
   <div class="container max-w-screen-xl mx-auto text-center grid grid-cols-1">
-    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       Accordion <br>
     </h1>
       <!-- Accordion Item 1 -->
@@ -385,7 +385,7 @@ input[type="checkbox"]:checked::after {
     <br><br><br><br><br>
 
   <!-- button -->
-    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       Alert <br>
     </h1>
     <button onclick="showAlert()" class="w-auto flex items-center justify-center px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 active:bg-blue-800">
@@ -450,7 +450,7 @@ input[type="checkbox"]:checked::after {
 <!-- card -->
 <section class="flex justify-center items-center min-h-screen">
   <div class="container py-40 max-w-screen-xl mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       Card, Avatar & Badges<br>
     </h1>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -526,7 +526,7 @@ input[type="checkbox"]:checked::after {
       </article>
 
       <div class="grid-items">
-        <a href="#" class="group relative block bg-black">
+        <a href="javascript:void(0)" class="group relative block bg-black">
           <img alt="" 
           src="./public/assets/card.jpg"
           loading="lazy" 
@@ -550,7 +550,7 @@ input[type="checkbox"]:checked::after {
           <span class="absolute inset-0 border-2 border-dashed border-white"></span>
           <div class="relative flex h-full transform items-end border-2 border-white bg-indigo-900 transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
             <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
-              <svg xmlns="http://www.w3.org/2000/svg" class="size-10 sm:size-12" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-10 sm:size-12" fill="none" viewBox="0 0 24 24" stroke="javascript:void(0)ffffff">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               
@@ -661,7 +661,7 @@ input[type="checkbox"]:checked::after {
 <!-- form -->
 <section class="flex justify-center items-center min-h-screen">
   <div class="container py-40 max-w-screen-xl  text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       form  <br>
     </h1>
     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -669,7 +669,7 @@ input[type="checkbox"]:checked::after {
       <form action="" class="grid gap-6 max-w-lg mx-auto">
         <div class="relative mb-6">
         <label class="flex  items-center mb-2 text-gray-100 text-sm font-medium">Name <svg width="7" height="7" class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444" />
+            <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="javascript:void(0)EF4444" />
           </svg>
         </label>
         <div class="relative  text-gray-500 focus-within:text-gray-300 mb-6">
@@ -683,7 +683,7 @@ input[type="checkbox"]:checked::after {
         </div>
         <div class="relative mb-6">
         <label class="flex  items-center mb-2 text-gray-100 text-sm font-medium">Email <svg width="7" height="7" class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444" />
+            <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="javascript:void(0)EF4444" />
           </svg>
         </label>
         <div class="relative  text-gray-500 focus-within:text-gray-300 mb-6">
@@ -697,7 +697,7 @@ input[type="checkbox"]:checked::after {
         </div>
         <!-- <div class="relative mb-6">
         <label class="flex  items-center mb-2 text-gray-100 text-sm font-medium">Country <svg width="7" height="7" class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444" />
+            <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="javascript:void(0)EF4444" />
           </svg>
         </label>
         <div class="relative  text-gray-500 focus-within:text-gray-300 mb-6">
@@ -711,7 +711,7 @@ input[type="checkbox"]:checked::after {
         </div> -->
         <!-- <div class="relative mb-6">
         <label class="flex  items-center mb-2 text-gray-100 text-sm font-medium">Phone Number <svg width="7" height="7" class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444" />
+            <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="javascript:void(0)EF4444" />
           </svg>
         </label>
         <div class="relative  text-gray-500 focus-within:text-gray-300 mb-6">
@@ -725,7 +725,7 @@ input[type="checkbox"]:checked::after {
         </div> -->
         <div class="relative mb-2">
         <label class="flex  items-center mb-2 text-gray-100 text-sm font-medium">Password <svg width="7" height="7" class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444" />
+            <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="javascript:void(0)EF4444" />
           </svg>
         </label>
         <div class="relative  text-gray-500 focus-within:text-gray-300 mb-6">
@@ -768,7 +768,7 @@ input[type="checkbox"]:checked::after {
                  </div>
                  <p class="text-sm text-center text-gray-200">
                    Dont Have Account?
-                   <a href="#!" class="font-semibold text-teal-500 focus:text-indigo-600 focus:outline-none focus:underline">Sign Up</a>.
+                   <a href="javascript:void(0)!" class="font-semibold text-teal-500 focus:text-indigo-600 focus:outline-none focus:underline">Sign Up</a>.
                  </p>
                </form>
                <!-- seperator -->  
@@ -783,7 +783,7 @@ input[type="checkbox"]:checked::after {
                    Github
                  </button>
                  <button class="bg-green-500 text-black w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-green-600 duration-100 ease-in-out">
-                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-5" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"></path><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path></svg>
+                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-5" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></defs><clipPath id="b"><use xlink:href="javascript:void(0)a" overflow="visible"></use></clipPath><path clip-path="url(#b)" fill="javascript:void(0)FBBC05" d="M0 37V11l17 13z"></path><path clip-path="url(#b)" fill="javascript:void(0)EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path clip-path="url(#b)" fill="javascript:void(0)34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path clip-path="url(#b)" fill="javascript:void(0)4285F4" d="M48 48L17 24l-4-3 35-10z"></path></svg>
                    Google
                  </button>
                </div>
@@ -800,7 +800,7 @@ input[type="checkbox"]:checked::after {
 
 <section class="flex justify-center items-center min-h-screen">
   <div class="container py-40 max-w-screen-xl mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       Dialog  <br>
     </h1>
     <div class="grid md:grid-cols-3 gap-5 max-w-12xl ">
@@ -878,7 +878,7 @@ input[type="checkbox"]:checked::after {
             </button>
             <p class="flex justify-center mt-4  text-sm antialiased font-light leading-normal text-inherit">
               Don&apos;t have an account?
-              <a href="#signup"
+              <a href="javascript:void(0)signup"
                 class="block ml-1  text-sm antialiased font-bold leading-normal text-blue-gray-900">
                 Sign up
               </a>
@@ -1012,7 +1012,7 @@ input[type="checkbox"]:checked::after {
 
 <section class="flex justify-center items-center min-h-screen">
   <div class="container py-40 max-w-screen-xl mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       Tabs <br>
     </h1>
     <div class="w-full">
@@ -1084,7 +1084,7 @@ input[type="checkbox"]:checked::after {
     <br>
   <br>
 
-    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       Galery  <br>
     </h1>
 
@@ -1190,7 +1190,7 @@ input[type="checkbox"]:checked::after {
 
 <section class="flex justify-center items-center min-h-screen">
   <div class="container py-40 max-w-screen-xl mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       popover <br>
     </h1>
     
@@ -1205,7 +1205,7 @@ input[type="checkbox"]:checked::after {
               class="absolute max-w-[24rem] whitespace-normal break-words rounded-lg border border-blue-gray-50 bg-white p-4 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none">
               <div class="flex items-center justify-between gap-4 mb-2">
                 <img
-                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                  src="./public/assets/icon/zavents-logo-new.png"
                   alt="tania andrew" class="relative inline-block object-cover object-center w-12 h-12 rounded-full" />
                 <button
                   class="select-none rounded-lg bg-gray-900 py-2 px-3 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -1215,13 +1215,13 @@ input[type="checkbox"]:checked::after {
               </div>
               <h6
                 class="flex items-center gap-2 mb-2 font-sans text-base antialiased font-medium leading-relaxed tracking-normal text-blue-gray-900">
-                <span>Tania Andrew</span> •{" "}
-                <a class="text-sm text-blue-gray-700" href="#">
-                  @andrew
+                <span>Wildan Zavents</span> •{" "}
+                <a class="text-sm text-blue-gray-700" href="javascript:void(0)">
+                  @Zavents
                 </a>
               </h6>
               <p class="block font-sans text-sm antialiased font-normal leading-normal text-gray-700">
-                A skilled developer with a passion for creating innovative solutions and a proven track record in full-stack development. Adept at working with a variety of technologies to build robust applications.
+                Currently is a Vocational High School student, majoring in software engineering at SMK Negeri 2 Pekanbaru
               </p>
               <div class="flex items-center gap-8 pt-4 mt-6 border-t border-blue-gray-50">
                 <p class="flex items-center gap-1 font-sans text-xs antialiased font-normal text-gray-700">
@@ -1231,16 +1231,16 @@ input[type="checkbox"]:checked::after {
                     <path stroke-linecap="round" stroke-linejoin="round"
                       d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path>
                   </svg>
-                  United Kingdom
+                  Indonesia
                 </p>
-                <a href="#" class="flex items-center gap-1 font-sans text-xs antialiased font-normal text-gray-700">
+                <a href="javascript:void(0)" class="flex items-center gap-1 font-sans text-xs antialiased font-normal text-gray-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                     aria-hidden="true" class="-mt-0.5 h-3.5 w-3.5">
                     <path stroke-linecap="round" stroke-linejoin="round"
                       d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z">
                     </path>
                   </svg>
-                  Material Tailwind
+                  Rawkuma
                 </a>
               </div>
             </div> 
@@ -1302,20 +1302,20 @@ input[type="checkbox"]:checked::after {
       components, all written with Tailwind CSS classes and Material
       Design guidelines.
     </p>
-    <a href="#" class="inline-block -ml-3">
+    <a href="javascript:void(0)" class="inline-block -ml-3">
       <button
         class="flex items-center px-4 py-2 font-sans text-xs font-bold text-center text-gray-900 capitalize align-middle transition-all rounded-lg select-none gap-x-2 hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         type="button">
         Read More
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.25 1.91669L5.33333 6.00002L1.25 10.0834" stroke="#212121" stroke-width="2" stroke-linecap="round"
+          <path d="M1.25 1.91669L5.33333 6.00002L1.25 10.0834" stroke="javascript:void(0)212121" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round"></path>
         </svg>
       </button>
     </a>
   </div>
             <div class="min-h-full !w-full p-3">
-              <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhbSUyMGJ1aWxkaW5nfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" alt="image" class="object-cover w-full h-full rounded-lg" />
+              <img src="./public/assets/galeri7.jpeg" loading="lazy" alt="image" class="object-cover w-full h-full rounded-lg" />
 
             </div>
           </div>
@@ -1337,12 +1337,57 @@ input[type="checkbox"]:checked::after {
         </div>
       </div>
     </div>
+
+    <h1 class="max-w-2xl mb-4 text-4xl pt-20 py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+      Proggres bar <br>
+    </h1>
+      <div class="flex flex-col w-full gap-4 bg-gray-800 border-2 border-green-500 shadow-lg shadow-green-700 p-10 rounded-2xl">
+        <div class="flex-start flex h-1.5 w-full overflow-hidden rounded-full font-sans text-xs font-medium bg-green-900">
+         <div class="flex items-center justify-center w-1/12 h-full overflow-hidden text-white break-all bg-green-400 rounded-full"></div>
+        </div>
+        <div class="flex-start flex h-1.5 w-full overflow-hidden rounded-full font-sans text-xs font-medium bg-teal-900">
+          <div class="flex items-center justify-center w-2/12 h-full overflow-hidden text-white break-all bg-teal-400 rounded-full"></div>
+        </div>
+        <div class="flex-start flex h-1.5 w-full overflow-hidden rounded-full font-sans text-xs font-medium bg-emerald-900">
+         <div class="flex items-center justify-center w-4/12 h-full overflow-hidden text-white break-all bg-emerald-400 rounded-full"></div>
+        </div>
+        <div class="flex-start flex h-1.5 w-full overflow-hidden rounded-full font-sans text-xs font-medium bg-cyan-900">
+         <div class="flex items-center justify-center w-5/12 h-full overflow-hidden text-white break-all bg-cyan-400 rounded-full"></div>
+        </div>
+        <div class="flex-start flex h-2.5 w-full overflow-hidden rounded-full font-sans text-xs font-medium bg-indigo-900">
+         <div class="flex items-center justify-center w-6/12 h-full overflow-hidden text-white break-all bg-indigo-400 rounded-full"></div>
+        </div>
+         <div class="flex-start flex h-3.5 w-full overflow-hidden rounded-full font-sans text-xs font-medium bg-pink-900">
+        <div class="flex items-center justify-center w-8/12 h-full overflow-hidden text-white break-all bg-pink-400 rounded-full"></div>
+      </div>
+    </div>  
+  </div>
+</section>
+
+
+
+<section class="flex justify-center items-center min-h-screen">
+  <div class="container py-40 max-w-screen-xl mx-auto text-center">
+    
   </div>
 </section>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer -->
 <hr>
 <br><br><br>
 <footer class="w-full">
