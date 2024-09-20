@@ -43,46 +43,10 @@
       ::-webkit-scrollbar-thumb:hover {
       background: #555;
       }
-      /* Custom checkbox styles */
-input[type="checkbox"] {
-  position: relative;
-  cursor: pointer;
-}
-
-input[type="checkbox"]::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 14px;
-  height: 14px;
-  background-color: white;
-  border-radius: 3px;
-  transform: translate(-50%, -50%);
-  border: 1px solid #cbd5e0; /* Gray border color */
-  z-index: 1;
-  transition: background-color 0.2s;
-}
-
-input[type="checkbox"]:checked::before {
-  background-color: #4f46e5; /* Indigo color for checked */
-  border: 1px solid #4f46e5;
-}
-
-input[type="checkbox"]:checked::after {
-  content: '✔';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  font-size: 12px;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
 @layer utilities {
   .scrollbar-thin {
     scrollbar-width: thin;
-    scrollbar-color: #07441e #333333; /* thumb color | track color */
+    scrollbar-color: #2ad46c #1c9d5698; /* thumb color | track color */
   }
 
   .scrollbar-thumb {
@@ -1835,11 +1799,11 @@ input[type="checkbox"]:checked::after {
 </div>
 
 
-<!-- Proggress bar -->
+<!-- loader -->
 <section class="flex justify-center items-center p">
   <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
     <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
-      Proggress bar <br>
+      loader <br>
     </h1>
     
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -2013,7 +1977,7 @@ input[type="checkbox"]:checked::after {
 </section>
 
 <!-- tabel -->
-<!-- <section class="flex justify-center items-center p">
+<section class="flex justify-center items-center ">
   <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
     <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       tabel <br>
@@ -2050,7 +2014,7 @@ input[type="checkbox"]:checked::after {
             </tr>
         </thead>
         <tbody>
-            <tr class="hover:bg-slate-50" >
+            <tr class="hover:bg-green-400" >
                 <td class="p-4 border-b border-slate-200">
                     <p class="block text-sm text-slate-800">
                         John Michael
@@ -2072,7 +2036,7 @@ input[type="checkbox"]:checked::after {
                     </p>
                 </td>
             </tr>
-            <tr class="hover:bg-slate-50" >
+            <tr class="hover:bg-green-400" >
                 <td class="p-4 border-b border-slate-200">
                     <p class="block text-sm text-slate-800">
                         Alexa Liras
@@ -2094,7 +2058,7 @@ input[type="checkbox"]:checked::after {
                     </p>
                 </td>
             </tr>
-            <tr class="hover:bg-slate-50" >
+            <tr class="hover:bg-green-400" >
                 <td class="p-4 border-b border-slate-200">
                     <p class="block text-sm text-slate-800">
                         Laurent Perrier
@@ -2116,7 +2080,7 @@ input[type="checkbox"]:checked::after {
                     </p>
                 </td>
             </tr>
-            <tr class="hover:bg-slate-50" >
+            <tr class="hover:bg-green-400" >
                 <td class="p-4 border-b border-slate-200">
                     <p class="block text-sm text-slate-800">
                         Michael Levi
@@ -2144,8 +2108,119 @@ input[type="checkbox"]:checked::after {
      
 
   </div>
-</section> -->
+</section>
 
+
+
+<!-- toggle switch -->
+<section class="flex justify-center items-center p">
+  <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
+    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+      toggle switch <br>
+    </h1>
+    
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Profile Info Popover -->
+      <div class="grid gap-4">
+        <div>
+          <div class="relative inline-block w-11 h-5">
+            <input checked checked id="switch-component-1" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-slate-800 cursor-pointer transition-colors duration-300" />
+            <label for="switch-component-1" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer">
+            </label>
+          </div>
+          <div class="relative inline-flex gap-2">
+            <div class="w-11 h-5">
+              <input id="switch-component-ripple-on" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-slate-800 cursor-pointer transition-colors duration-300" />
+         
+              <label
+                for="switch-component-ripple-on"
+                class="absolute top-0 left-0 h-5 w-5 cursor-pointer rounded-full border border-slate-300 bg-white shadow-sm transition-all duration-300 before:absolute before:top-2/4 before:left-2/4 before:block before:h-10 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity hover:before:opacity-10 peer-checked:translate-x-6 peer-checked:border-slate-800"
+              >
+                <div
+                  class="top-2/4 left-2/4 inline-block -translate-x-2/4 -translate-y-2/4 rounded-full p-5"
+                  data-ripple-dark="true"
+                ></div>
+              </label>
+            </div>
+         
+            <label for="switch-component-ripple-on" class="text-slate-600 text-sm cursor-pointer">
+              Ripple Effect On
+            </label>
+          </div>
+        </div> 
+      </div>
+
+        <div class="grid gap-4">
+          <div>
+            <div class="relative inline-block w-11 h-5">
+              <input checked id="switch-component-blue" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-blue-600 cursor-pointer transition-colors duration-300" />
+              <label for="switch-component-blue" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-blue-600 cursor-pointer">
+              </label>
+            </div>
+            <div class="relative inline-block w-11 h-5">
+              <input checked id="switch-component-red" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-red-600 cursor-pointer transition-colors duration-300" />
+              <label for="switch-component-red" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-red-600 cursor-pointer">
+              </label>
+            </div>
+            <div class="relative inline-block w-11 h-5">
+              <input checked id="switch-component-green" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-green-600 cursor-pointer transition-colors duration-300" />
+              <label for="switch-component-green" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-green-600 cursor-pointer">
+              </label>
+            </div>
+            <div class="relative inline-block w-11 h-5">
+              <input checked id="switch-component-amber" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-amber-600 cursor-pointer transition-colors duration-300" />
+              <label for="switch-component-amber" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-amber-600 cursor-pointer">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid gap-4">
+          <div>
+            <div class="relative inline-block w-11 h-5">
+              <input checked id="switch-component-teal" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-teal-600 cursor-pointer transition-colors duration-300" />
+              <label for="switch-component-teal" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-teal-600 cursor-pointer">
+              </label>
+            </div>
+            <div class="relative inline-block w-11 h-5">
+              <input checked id="switch-component-indigo" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-indigo-600 cursor-pointer transition-colors duration-300" />
+              <label for="switch-component-indigo" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-indigo-600 cursor-pointer">
+              </label>
+            </div>
+            <div class="relative inline-block w-11 h-5">
+              <input checked id="switch-component-purple" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-purple-600 cursor-pointer transition-colors duration-300" />
+              <label for="switch-component-purple" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-purple-600 cursor-pointer">
+              </label>
+            </div>
+            <div class="relative inline-block w-11 h-5">
+              <input checked id="switch-component-pink" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-pink-600 cursor-pointer transition-colors duration-300" />
+              <label for="switch-component-pink" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-pink-600 cursor-pointer">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid gap-4">
+          <div>
+            <div class="relative inline-block w-11 h-5">
+              <input id="switch-component-desc" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-slate-800 cursor-pointer transition-colors duration-300" />
+              <label for="switch-component-desc" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer">
+              </label>
+            </div>
+           
+            <label for="switch-component-desc" class="text-slate-600 text-sm cursor-pointer">
+              <div>
+                <p class="font-medium">
+                  Remember Me
+                </p>
+
+              </div>
+            </label>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- footer -->
@@ -2206,6 +2281,7 @@ input[type="checkbox"]:checked::after {
    <script src="./public/js/tailwind.js"></script>
    <script src="./public/js/tabs.js" type="text/javascript"></script>
    <script src="./public/js/popover.js" type="module"></script>
+   <script src="./public/js/riple.js" type="module"></script>
       <!-- dialog  js -->
       <script src="./public/js/dialog.js"></script>
    <!-- Alpine.js -->
