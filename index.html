@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./public/assets2/icon/zavents-logo-new.png">
     <!-- style css -->
     <link rel="stylesheet" href="./public/style/style.css">
+    <link rel="stylesheet" href="./src/input.css">
     <style>
       @font-face {
         font-family: Terminus;
@@ -71,6 +72,7 @@
     </style>
 </head>
 <body style="background-color:#1e1b4b;"> 
+  
   <section class="hero bg-gradient-to-b from-indigo-500 to-indigo-950 h-screen">
   
   <!-- NAVIGATION BAR -->
@@ -95,10 +97,10 @@
         x-transition:leave-start="opacity-100 transform translate-y-0"
         x-transition:leave-end="opacity-0 transform -translate-y-4"
         class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-blue-400 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="javascript:void(0)accordion">Home</a>
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="javascript:void(0)">Components</a>
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="javascript:void(0)">Documents</a>
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline" href="javascript:void(0)">Contact</a>
+    <a class="nav-bar-a" href="javascript:void(0)accordion">Home</a>
+    <a class="nav-bar-a" href="javascript:void(0)">Components</a>
+    <a class="nav-bar-a" href="javascript:void(0)">Documents</a>
+    <a class="nav-bar-a" href="javascript:void(0)">Contact</a>
     
 
     <div @click.away="open = false" class="relative" x-data="{ open: false }">
@@ -121,12 +123,12 @@
 </div>
   
 <!-- MAIN PAGE -->
-<div class="container py-40 max-w-screen-xl px-8 md:px-6 lg:px-8 flex justify-center items-center mx-auto lg:grid lg:grid-cols-12">
+<div class="con-max-w-screen-xl px-8 md:px-6 lg:px-8  flexing-center mx-auto lg:grid lg:grid-cols-12">
   <div class="mr-auto place-self-center lg:col-span-7">
     <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold">Let's Learn HTML<br>
       <span class="text-blue-300 font-extrabold lg:text-7xl md:text-6xl text-5xl ">Tailwind.</span></h1> <!-- Updated text color -->
     <p class="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl"><span class="text-blue-300">Tailwind CSS</span> is a utility-first CSS framework that allows developers to build custom designs quickly by composing pre-defined classes.</p> <!-- Updated paragraph text color -->
-    <a href="javascript:void(0)" class="inline-flex items-center justify-center px-5 py-3  font-medium text-center text-white border border-blue-300 rounded-lg hover:bg-blue-300 hover:text-gray-900 focus:ring-4 focus:ring-blue-500">
+    <a href="javascript:void(0)" class="inline-flex nav-bar-a   border text-white">
       Get Started
     </a> 
   </div>
@@ -138,26 +140,26 @@
 <!-- MAIN PAGE -->
 
 <!-- collums -->
-  <section class="flex justify-center items-center p">
-    <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
+  <section class=" flexing-center p">
+    <div class="con-max-w-screen-xl mx-autocenter">
   
-      <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+      <h1 class=" ">
         Columns <br>
       </h1>
       <div class="place-self-center">
         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-          <div class=" p-4 bg-teal-500 hover:bg-teal-200 text-black">Item 1</div>
-          <div class=" p-4 bg-green-500 hover:bg-green-300 text-black">Item 2</div>
-          <div class=" p-4 bg-teal-500 hover:bg-teal-200 text-black">Item 3</div>
-          <div class=" p-4 bg-green-500 hover:bg-green-300 text-black">Item 4</div>
+          <div class=" p-4 teal-5000 text-black">Item 1</div>
+          <div class=" p-4 green-5000 text-black">Item 2</div>
+          <div class=" p-4 teal-5000 text-black">Item 3</div>
+          <div class=" p-4 green-5000 text-black">Item 4</div>
         </div>
         <p class="max-w-5xl mb-2 text-lg text-gray-100 mx-auto">
           For this case, I use <code>grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4</code> in Tailwind CSS. This means:
           <ul class=" text-left list-disc pl-6">
-            <li class="  mb-2 text-sm text-gray-100">It will show 4 items per row on screens larger than 1280px (xl breakpoint).</li>
-            <li class="  mb-2 text-sm text-gray-100">It will show 2 items per row on screens larger than 768px (md breakpoint).</li>
-            <li class="  mb-2 text-sm text-gray-100">It will show 1 item per row on screens larger than 640px (sm breakpoint).</li>
-            <li class="  mb-2 text-sm text-gray-100">On screens smaller than 640px, it will also show 1 item per row.</li>
+            <li class="  mb2-textsm">It will show 4 items per row on screens larger than 1280px (xl breakpoint).</li>
+            <li class="  mb2-textsm">It will show 2 items per row on screens larger than 768px (md breakpoint).</li>
+            <li class="  mb2-textsm">It will show 1 item per row on screens larger than 640px (sm breakpoint).</li>
+            <li class="  mb2-textsm">On screens smaller than 640px, it will also show 1 item per row.</li>
           </ul>
         </p>
         
@@ -169,68 +171,68 @@
         <p class="max-w-5xl mb-2 text-lg text-gray-300 mx-auto">
           <code>grid grid-cols-12 </code> you can change hows the <code>cols</code> works by changing <code>col-span</code> nor <code>grid-cols</code> as you want
         </p>
-        <div class="grid grid-cols-12 gap-1">
-          <div class="col-span-4 border-2 border-white bg-green-500 hover:bg-green-300 bg-opacity-80 p-4">
+        <div class="grit-cols12 ">
+          <div class="col-span-4 b-2 border-white green-5000 bg-opacity-80 p-4">
             grid
           </div>
-          <div class="col-span-4 border-2 border-white bg-teal-500 hover:bg-teal-200 bg-opacity-80 p-4">
+          <div class="col-span-4 b-2 border-white teal-5000 bg-opacity-80 p-4">
             col-span-4
           </div>
-          <div class="col-span-4 border-2 border-white bg-green-500 hover:bg-green-300 bg-opacity-80 p-4">
+          <div class="col-span-4 b-2 border-white green-5000 bg-opacity-80 p-4">
             Column
           </div>
         </div>
 
-        <div class="grid grid-cols-12 gap-1 my-2">
-          <div class="col-span-1 border-2 border-white bg-green-700 hover:bg-green-600 bg-opacity-80 p-4">
+        <div class="grit-cols12  my-2">
+          <div class="col-span-1 b-2 border-white bg-green-700 hover:bg-green-600 bg-opacity-80 p-4">
             1
           </div>
-          <div class="col-span-11 border-2 border-white bg-teal-700 hover:bg-teal-600 bg-opacity-80 p-4">
+          <div class="col-span-11 b-2 border-white bg-teal-700 hover:bg-teal-600 bg-opacity-80 p-4">
             col-span-11
           </div>
         </div>
 
-        <div class="grid grid-cols-12 gap-1 my-2">
-          <div class="col-span-2 border-2 border-white bg-green-600 hover:bg-green-500 bg-opacity-80 p-4">
+        <div class="grit-cols12  my-2">
+          <div class="col-span-2 b-2 border-white bg-green-600 hover:bg-green-500 bg-opacity-80 p-4">
             2
           </div>
-          <div class="col-span-10 border-2 border-white bg-teal-600 hover:bg-teal-500 bg-opacity-80 p-4">
+          <div class="col-span-10 b-2 border-white bg-teal-600 hover:bg-teal-500 bg-opacity-80 p-4">
             col-span-10
           </div>
         </div>
 
-        <div class="grid grid-cols-12 gap-1 my-2">
-          <div class="col-span-3 border-2 border-white bg-green-500 hover:bg-green-400 bg-opacity-80 p-4">
+        <div class="grit-cols12  my-2">
+          <div class="col-span-3 b-2 border-white bg-green-500 hover:bg-green-400 bg-opacity-80 p-4">
             3
           </div>
-          <div class="col-span-9 border-2 border-white bg-teal-500 hover:bg-teal-400 bg-opacity-80 p-4">
+          <div class="col-span-9 b-2 border-white bg-teal-500 hover:bg-teal-400 bg-opacity-80 p-4">
             col-span-9
           </div>
         </div>
 
-        <div class="grid grid-cols-12 gap-1 my-2">
-          <div class="col-span-4 border-2 border-white bg-green-400 hover:bg-green-300 bg-opacity-80 p-4">
+        <div class="grit-cols12  my-2">
+          <div class="col-span-4 b-2 border-white bg-green-400 hover:bg-green-300 bg-opacity-80 p-4">
            4
           </div>
-          <div class="col-span-8 border-2 border-white bg-teal-400 hover:bg-teal-300 bg-opacity-80 p-4">
+          <div class="col-span-8 b-2 border-white bg-teal-400 hover:bg-teal-300 bg-opacity-80 p-4">
             col-span-10
           </div>
         </div>
 
-        <div class="grid grid-cols-12 gap-1 my-2">
-          <div class="col-span-5 border-2 border-white bg-green-300 hover:bg-green-200 bg-opacity-80 p-4">
+        <div class="grit-cols12  my-2">
+          <div class="col-span-5 b-2 border-white bg-green-300 hover:bg-green-200 bg-opacity-80 p-4">
             col-span-5
           </div>
-          <div class="col-span-7 border-2 border-white bg-teal-300 hover:bg-teal-200 bg-opacity-80 p-4">
+          <div class="col-span-7 b-2 border-white bg-teal-300 hover:bg-teal-200 bg-opacity-80 p-4">
             col-span-5
           </div>
         </div>
 
-        <div class="grid grid-cols-12 gap-1 my-2">
-          <div class="col-span-6 border-2 border-white bg-green-200 hover:bg-green-200 bg-opacity-80 p-4">
+        <div class="grit-cols12  my-2">
+          <div class="col-span-6 b-2 border-white bg-green-200 hover:bg-green-200 bg-opacity-80 p-4">
             col-span-6
           </div>
-          <div class="col-span-6 border-2 border-white bg-teal-200 hover:bg-teal-200 bg-opacity-80 p-4">
+          <div class="col-span-6 b-2 border-white bg-teal-200 hover:bg-teal-200 bg-opacity-80 p-4">
             col-span-6
           </div>
         </div>
@@ -240,57 +242,57 @@
   </section>
 <!-- collums -->
 
-<!--  -->
-<section class="flex justify-center items-center min-h-3">
-  <div class="container max-w-screen-xl p-4 mx-auto text-center grid grid-cols-1">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+<!-- Layout Justifyn  -->
+<section class="flexing-center min-h-3">
+  <div class="container max-w-screen-xl mx-autocenter grid grid-cols-1">
+    <h1 class=" ">
       Layout Justify <br>
     </h1>
     <div class="flex mb-4 justify-start">
-      <div class=" my-2 border-2 border-white bg-green-500 hover:bg-green-300 text-black p-4">
+      <div class=" bwhite green-5000 text-black p-4">
         justify-start
       </div>
-      <div class=" my-2 border-2 border-white bg-teal-500 hover:bg-teal-300 text-black p-4">
+      <div class=" bwhite bg-teal-500 hover:bg-teal-300 text-black p-4">
         One of two columns
       </div>
     </div>
     <div class="flex mb-4 justify-center">
-      <div class=" my-2 border-2 border-white bg-green-500 hover:bg-green-300 text-black p-4">
+      <div class=" bwhite green-5000 text-black p-4">
         justify-center
       </div>
-      <div class=" my-2 border-2 border-white bg-teal-500 hover:bg-teal-300 text-black p-4">
+      <div class=" bwhite bg-teal-500 hover:bg-teal-300 text-black p-4">
         One of two columns
       </div>
     </div>
     <div class="flex mb-4 justify-end">
-      <div class=" my-2 border-2 border-white bg-green-500 hover:bg-green-300 text-black p-4">
+      <div class=" bwhite green-5000 text-black p-4">
         justify-end
       </div>
-      <div class=" my-2 border-2 border-white bg-teal-500 hover:bg-teal-300 text-black p-4">
+      <div class=" bwhite bg-teal-500 hover:bg-teal-300 text-black p-4">
         One of two columns
       </div>
     </div>
     <div class="flex mb-4 justify-around">
-      <div class=" my-2 border-2 border-white bg-green-500 hover:bg-green-300 text-black p-4">
+      <div class=" bwhite green-5000 text-black p-4">
         justify-around
       </div>
-      <div class=" my-2 border-2 border-white bg-teal-500 hover:bg-teal-300 text-black p-4">
+      <div class=" bwhite bg-teal-500 hover:bg-teal-300 text-black p-4">
         One of two columns
       </div>
     </div>
     <div class="flex mb-4 justify-between">
-      <div class=" my-2 border-2 border-white bg-green-500 hover:bg-green-300 text-black p-4">
+      <div class=" bwhite green-5000 text-black p-4">
         justify-between
       </div>
-      <div class=" my-2 border-2 border-white bg-teal-500 hover:bg-teal-300 text-black p-4">
+      <div class=" bwhite bg-teal-500 hover:bg-teal-300 text-black p-4">
         One of two columns
       </div>
     </div>
     <div class="flex mb-5 justify-evenly">
-      <div class=" my-2 border-2 border-white bg-green-500 hover:bg-green-300 text-black p-4">
+      <div class=" bwhite green-5000 text-black p-4">
         justify-evenly
       </div>
-      <div class=" my-2 border-2 border-white bg-teal-500 hover:bg-teal-300 text-black p-4">
+      <div class=" bwhite bg-teal-500 hover:bg-teal-300 text-black p-4">
         One of two columns
       </div>
     </div>
@@ -298,22 +300,22 @@
 </section>
 
 <!-- accordion -->
-<section class="flex justify-center items-center p" id="accordion">
-  <div class="container max-w-screen-xl p-4 mx-auto text-center grid grid-cols-1">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+<section class=" flexing-center p" id="accordion">
+  <div class="container max-w-screen-xl mx-autocenter grid grid-cols-1">
+    <h1 class=" ">
       Accordion <br>
     </h1>
       <!-- Accordion Item 1 -->
     <div class="border-b border-slate-200">
-      <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-white">
+      <button onclick="toggleAccordion(1)" class="akordion  text-white">
         <span>What is Material Tailwind?</span>
-        <span id="icon-1" class="text-white transition-transform duration-300">
+        <span id="icon-1" class="akordion-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
             <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
           </svg>
         </span>
       </button>
-      <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div id="content-1" class="akordion-text">
         <div class="pb-5 text-sm text-white">
           Material Tailwind is a framework that enhances Tailwind CSS with additional styles and components.
         </div>
@@ -322,15 +324,15 @@
 
     <!-- Accordion Item 2 -->
     <div class="border-b border-white">
-      <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-white">
+      <button onclick="toggleAccordion(2)" class="akordion  text-white">
         <span>How to use Material Tailwind?</span>
-        <span id="icon-2" class="text-white transition-transform duration-300">
+        <span id="icon-2" class="akordion-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
             <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
           </svg>
         </span>
       </button>
-      <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div id="content-2" class="akordion-text">
         <div class="pb-5 text-sm text-white">
           You can use Material Tailwind by importing its components into your Tailwind CSS project.
         </div>
@@ -339,15 +341,15 @@
 
     <!-- Accordion Item 3 -->
     <div class="border-b border-white">
-      <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-white">
+      <button onclick="toggleAccordion(3)" class="akordion  text-white">
         <span>What can I do with Material Tailwind?</span>
-        <span id="icon-3" class="text-white transition-transform duration-300">
+        <span id="icon-3" class="akordion-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
             <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
           </svg>
         </span>
       </button>
-      <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div id="content-3" class="akordion-text">
         <div class="pb-5 text-sm text-white">
           Material Tailwind allows you to quickly build modern, responsive websites with a focus on design.
         </div>
@@ -355,7 +357,7 @@
     </div>
 
     <div class="border-b border-slate-200">
-      <button disabled onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-400 cursor-not-allowed">
+      <button disabled onclick="toggleAccordion(1)" class="akordion  text-slate-400 cursor-not-allowed">
         <span>is PHP better than JS ?</span>
         <span id="icon-1" class="text-slate-400 transition-transform duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
@@ -363,7 +365,7 @@
           </svg>
         </span>
       </button>
-      <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div id="content-1" class="akordion-text">
         <div class="pb-5 text-sm text-slate-500">
           no its not.
         </div>
@@ -373,9 +375,9 @@
     <br><br><br><br><br>
 
   <!-- button -->
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+  <h1 class=" ">
       Alert <br>
-    </h1>
+  </h1>
     <button onclick="showAlert()" class="w-auto flex items-center justify-center px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 active:bg-blue-800">
       Alert Button
     </button>
@@ -388,7 +390,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
       </svg>
       Sorry, something went wrong please try again.
-      <button onclick="closeAlert()" class="flex items-center justify-center transition-all px-2 h-8 rounded-md text-white hover:bg-white active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+      <button onclick="closeAlert()" class="alertb px-2 h-8 rounded-md text-white hover:bg-white active:bg-white/10 absolute top-1.5 right-1.5" type="button">
         Close
       </button>
     </div>
@@ -411,13 +413,13 @@
         <li>At least one lowercase character</li>
         <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
       </ul>
-      <button onclick="closeRequirementAlert()" class="flex items-center justify-center transition-all px-2 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+      <button onclick="closeRequirementAlert()" class="alertb px-2 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
         Close
       </button>
     </div>
-    <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-white bg-blue-900 rounded-xl border-2 border-white">
+    <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-white bg-blue-900 rounded-xl b-2 border-white">
       A simple filled alert for showing message.
-      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+      <button class="alertb w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2">
       <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
@@ -425,20 +427,19 @@
     </div>
     <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-white bg-gradient-to-tr from-slate-800 to-slate-700 rounded-md">
       A simple gradient alert for showing message.
-      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+      <button class="alertb w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2">
       <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
       </button>
       </div>
-
   </div>
 </section>
 
 <!-- card -->
-<section class="flex justify-center items-center p">
-  <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+<section class=" flexing-center p">
+  <div class="con-max-w-screen-xl mx-autocenter">
+    <h1 class=" ">
       Card, Avatar & Badges<br>
     </h1>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -449,10 +450,9 @@
               alt=""
               src="./public/assets2/icon/zavents-logo-new.png"
               
-              class="size-16 rounded-full object-cover border-2 border-transparent hover:border-white transition ease-in-out duration-100"
+              class="size-16 rounded-full object-cover b-2 border-transparent hover:border-white transition ease-in-out duration-100"
             />
-            <!-- Status indicator -->
-            <span class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 border-2 border-gray-800 rounded-full"></span>
+            <span class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 b-2 border-gray-800 rounded-full"></span>
           </div>
     
           <div class="text-left">
@@ -535,8 +535,8 @@
 
       <div class="grid-items">
         <a href="https://rawkuma.com" target="_blank" class="group relative block h-64 sm:h-80 lg:h-96">
-          <span class="absolute inset-0 border-2 border-dashed border-white"></span>
-          <div class="relative flex h-full transform items-end border-2 border-white bg-indigo-900 transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+          <span class="absolute inset-0 b-2 border-dashed border-white"></span>
+          <div class="relative flex h-full transform items-end b-2 border-white bg-indigo-900 transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
             <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
               <svg xmlns="http://www.w3.org/2000/svg" class="size-10 sm:size-12" fill="none" viewBox="0 0 24 24" stroke="javascript:void(0)ffffff">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -559,8 +559,8 @@
 </section>
 
 <!-- carousel -->
-<section class="flex justify-center items-center p ">
-  <div class="container py-20 md:py-40 max-w-screen-xl p-4 mx-auto text-center">
+<section class=" flexing-center p ">
+  <div class="container py-20 md:py-40 max-w-screen-xl mx-autocenter">
     <h1 class="max-w-2xl mb-4 text-3xl tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
       Banner & Timer <br>
     </h1>
@@ -578,7 +578,7 @@
         </div>
         <div class="flex items-center lg:justify-start justify-center">
           <button type="button" class="py-2.5 px-5 text-xs md:text-sm bg-blue-500 text-white rounded-full cursor-pointer font-semibold text-center shadow-sm transition-all duration-300 hover:bg-blue-300 hover:text-black mr-4 md:mr-8">Buy now</button>
-          <button data-dismiss="alert" type="button" class="flex-shrink-0 inline-flex justify-center items-center text-gray-300 rounded-lg text-sm p-1">
+          <button data-dismiss="alert" type="button" class="flex-shrink-0 inline- flexing-center text-gray-300 rounded-lg text-sm p-1">
             <svg class="text-gray-900 hover:text-gray-500 transition-all duration-150" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.58325 18.4167L18.4166 7.58333M18.4166 18.4167L7.58325 7.58333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -647,9 +647,9 @@
 
 
 <!-- form -->
-<section class="flex justify-center items-center p-5 ">
+<section class=" flexing-center p-5 ">
   <div class="container py-40  max-w-screen-xl  text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class="h1-text ">
       form  <br>
     </h1>
     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -738,7 +738,7 @@
       
         <!-- First Form -->
         <form action="" class="grid gap-6 max-w-lg mx-auto">
-          <div class="container sm:mt-40 mt-24 my-auto max-w-md border-2 border-gray-200 rounded-[20px] p-3 bg-gray-800">
+          <div class="container sm:mt-40 mt-24 my-auto max-w-md b-2 border-gray-200 rounded-[20px] p-3 bg-gray-800">
              <!-- header -->  
              <div class="text-center m-6">
                <h1 class="text-3xl font-semibold text-gray-100">Forgot Your Password?</h1>
@@ -748,7 +748,7 @@
              <div class="m-6">
                <form class="mb-4">
                  <div class="mb-6">
-                   <label for="email" class="block mb-2 text-sm text-gray-100 dark:text-gray-400">Email Address</label>
+                   <label for="email" class="block mb2-textsm dark:text-gray-400">Email Address</label>
                    <input type="email" name="email" id="email" placeholder="Your Email Address" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500">
                  </div>
                  <div class="mb-6">
@@ -786,9 +786,9 @@
 
 
 <!-- dialogn -->
-<!-- <section class="flex justify-center items-center p">
-  <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+<!-- <section class=" flexing-center p">
+  <div class="con-max-w-screen-xl mx-autocenter">
+    <h1 class=" ">
       Dialog  <br>
     </h1>
     <div class="grid md:grid-cols-3 gap-5 max-w-12xl ">
@@ -816,7 +816,7 @@
           </h6>
           <div class="relative h-11 w-full min-w-[200px]">
             <input
-              class="w-full h-full px-3 py-3  text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              class="w-full h-full px-3 py-3  text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:b-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
               placeholder=" " />
             <label
               class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
@@ -829,7 +829,7 @@
           </h6>
           <div class="relative h-11 w-full min-w-[200px]">
             <input
-              class="w-full h-full px-3 py-3  text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              class="w-full h-full px-3 py-3  text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:b-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
               placeholder=" " />
             <label
               class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
@@ -947,9 +947,9 @@
 </section> -->
 
 <!-- tabs -->
-<section class="flex justify-center items-center p">
-  <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+<section class=" flexing-center p">
+  <div class="con-max-w-screen-xl mx-autocenter">
+    <h1 class=" ">
       Tabs <br>
     </h1>
     <div class="w-full">
@@ -1021,7 +1021,7 @@
     <br>
   <br>
 
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class=" ">
       Galery  <br>
     </h1>
 
@@ -1125,9 +1125,9 @@
 
 
 <!-- POPOVER -->
-<section class="flex justify-center items-center p">
-  <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+<section class=" flexing-center p">
+  <div class="con-max-w-screen-xl mx-autocenter">
+    <h1 class=" ">
       Popover <br>
     </h1>
     
@@ -1242,7 +1242,7 @@
               Your Name
             </p>
             <div class="flex flex-col gap-2">
-              <input placeholder="name@mail.com" class="peer h-8 w-full rounded-md border border-blue-gray-200 bg-transparent px-3  text-sm text-blue-gray-700 outline-none transition-all focus:border-2 focus:border-gray-900">
+              <input placeholder="name@mail.com" class="peer h-8 w-full rounded-md border border-blue-gray-200 bg-transparent px-3  text-sm text-blue-gray-700 outline-none transition-all focus:b-2 focus:border-gray-900">
               <button class="rounded-lg bg-gray-900 py-2 px-4 text-center  text-xs font-bold uppercase text-white shadow-md transition-all hover:shadow-lg">
                 Subscribe
               </button>
@@ -1284,10 +1284,10 @@
         </div>
       </div>
     </div>
-    <h1 class="max-w-2xl mb-4 text-4xl pt-20 py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class=" ">
       Proggres bar <br>
     </h1>
-      <div class="flex flex-col w-full gap-4 bg-gray-800 border-2 border-green-500 shadow-lg shadow-green-700 p-10 rounded-2xl">
+      <div class="flex flex-col w-full gap-4 bg-gray-800 b-2 border-green-500 shadow-lg shadow-green-700 p-10 rounded-2xl">
         <div class="flex-start flex h-1.5 w-full overflow-hidden rounded-full font-sans text-xs font-medium bg-green-900">
          <div class="flex items-center justify-center w-1/12 h-full overflow-hidden text-white break-all bg-green-400 rounded-full"></div>
         </div>
@@ -1312,9 +1312,9 @@
 
 
 <!-- form -->
-<section class="flex justify-center items-center p-5 ">
+<section class=" flexing-center p-5 ">
   <div class="container py-40  max-w-screen-xl  text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+    <h1 class=" ">
       Rating and Select <br>
     </h1>
     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -1737,9 +1737,9 @@
 
 
 <!-- loader -->
-<section class="flex justify-center items-center p">
-  <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+<section class=" flexing-center p">
+  <div class="con-max-w-screen-xl mx-autocenter">
+    <h1 class=" ">
       loader <br>
     </h1>
     
@@ -1913,9 +1913,9 @@
 </section>
 
 <!-- tabel -->
-<section class="flex justify-center items-center ">
-  <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+<section class=" flexing-center ">
+  <div class="con-max-w-screen-xl mx-autocenter">
+    <h1 class=" ">
       tabel <br>
     </h1>
     
@@ -2049,9 +2049,9 @@
 
 
 <!-- toggle switch -->
-<section class="flex justify-center items-center p">
-  <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+<section class=" flexing-center p">
+  <div class="con-max-w-screen-xl mx-autocenter">
+    <h1 class=" ">
       toggle switch <br>
     </h1>
     
@@ -2154,9 +2154,9 @@
   </div>
 </section>
 <!-- pagination -->
-<section class="flex justify-center items-center ">
-  <div class="container py-40 max-w-screen-xl p-4 mx-auto text-center">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto">
+<section class=" flexing-center ">
+  <div class="con-max-w-screen-xl mx-autocenter">
+    <h1 class=" ">
       pagination <br>
     </h1>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -2187,19 +2187,19 @@
 
           <div class="w-full place-items-center rounded-lg lg:overflow-visible">
             
-              <button class="rounded-full bg-white border-2 border-emerald-700 py-2 px-2 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-emerald-700 hover:border-slate-800 focus:text-white focus:bg-emerald-700 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-emerald-700 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
+              <button class="rounded-full bg-white b-2 border-emerald-700 py-2 px-2 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-emerald-700 hover:border-slate-800 focus:text-white focus:bg-emerald-700 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-emerald-700 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
               Prev
               </button>
-              <button class="min-w-9 rounded-full border-2 border-slate-800 bg-emerald-700 py-2 px-2 text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-emerald-500 focus:shadow-none active:bg-emerald-500 hover:bg-emerald-500 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
+              <button class="min-w-9 rounded-full b-2 border-slate-800 bg-emerald-700 py-2 px-2 text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-emerald-500 focus:shadow-none active:bg-emerald-500 hover:bg-emerald-500 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
               1
               </button>
-              <button class="min-w-9 rounded-full border-2 border-emerald-700 py-2 px-2 text-center text-sm transition-all shadow-sm hover:shadow-lg text-white hover:text-white hover:bg-emerald-700 hover:border-slate-800 focus:text-white focus:bg-emerald-700 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-emerald-700-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
+              <button class="min-w-9 rounded-full b-2 border-emerald-700 py-2 px-2 text-center text-sm transition-all shadow-sm hover:shadow-lg text-white hover:text-white hover:bg-emerald-700 hover:border-slate-800 focus:text-white focus:bg-emerald-700 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-emerald-700-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
               2
               </button>
-              <button class="min-w-9 rounded-full border-2 border-emerald-700 py-2 px-2 text-center text-sm transition-all shadow-sm hover:shadow-lg text-white hover:text-white hover:bg-emerald-700 hover:border-slate-800 focus:text-white focus:bg-emerald-700 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-emerald-700-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
+              <button class="min-w-9 rounded-full b-2 border-emerald-700 py-2 px-2 text-center text-sm transition-all shadow-sm hover:shadow-lg text-white hover:text-white hover:bg-emerald-700 hover:border-slate-800 focus:text-white focus:bg-emerald-700 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-emerald-700-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
               3
               </button>
-              <button class="rounded-full bg-white border-2 border-emerald-700 py-2 px-2 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-emerald-700 hover:border-slate-800 focus:text-white focus:bg-emerald-700 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-emerald-700 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
+              <button class="rounded-full bg-white b-2 border-emerald-700 py-2 px-2 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-emerald-700 hover:border-slate-800 focus:text-white focus:bg-emerald-700 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-emerald-700 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
               Next
               </button>
 
