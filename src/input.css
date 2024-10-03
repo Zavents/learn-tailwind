@@ -1,58 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './src/input.css';  /* Import file CSS custom */
+
+
 @layer components {
-.h1-text {
-    @apply max-w-2xl mb-4 text-4xl pt-20 py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto !important;
-}
-.nav-bar-a {
-    @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg 
-           md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 
-           hover:bg-blue-300 focus:bg-blue-300 
-           focus:outline-none focus:ring-2 focus:ring-blue-300;
-}
-.h1-header{
-    @apply max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold;
-}
-.teal-5000{
-    @apply bg-teal-500 hover:bg-teal-200;
-}
-.green-5000{
-    @apply bg-green-500 hover:bg-green-300;
-}
-.mb2-textsm{
-    @apply mb-2 text-sm text-gray-100;
-}
-.grit-cols12{
-    @apply grid grid-cols-12 gap-1;
+    .h1-text {
+        @apply max-w-2xl mb-4 text-4xl pt-20 py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold mx-auto !important;
+    }
+    .nav-bar-a {
+        @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg 
+               md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 
+               hover:bg-blue-300 focus:bg-blue-300 
+               focus:outline-none focus:ring-2 focus:ring-blue-300;
+    }
+    .h1-header {
+        @apply max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold;
+    }
+    .teal-5000 {
+        @apply bg-teal-500 hover:bg-teal-200;
+    }
+    .green-5000 {
+        @apply bg-green-500 hover:bg-green-300;
+    }
+    .mb2-textsm {
+        @apply mb-2 text-sm text-gray-100;
+    }
+    .grit-cols12 {
+        @apply grid grid-cols-12 gap-1;
+    }
+    .b2 {
+        @apply border-2;
+    }
+    .bwhite {
+        @apply my-2 border-2 border-white;
+    }
+    .con-max-w-screen-xl {
+        @apply container py-40 max-w-screen-xl;
+    }
+    .mx-autocenter {
+        @apply p-4 mx-auto text-center;
+    }
+    .flexing-center {
+        @apply flex justify-center items-center;
+    }
+    .akordion {     
+        @apply w-full flex justify-between items-center py-5;
+    }
+    .akordion-icon {
+        @apply text-white transition-transform duration-300;
+    }
+    .akordion-text {
+        @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
+    }
+    .alertb {
+        @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
+    }
+    .con-max-wxl{
+        @apply container py-40  max-w-screen-xl  text-center;
+    }
+    .form-h{
+        @apply flex  items-center mb-2 text-gray-100 text-sm font-medium;
+    }
+    .form-i{
+        @apply absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none;
+    }
+    .form-t {
+        @apply block w-full h-11 pr-5 pl-12 py-2.5 font-normal shadow-sm text-gray-300 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:ring-0;
+    }
+    .form-ic{
+        @apply relative  text-gray-500 focus-within:text-gray-300 mb-6;
+    }
 
-}
-.b2{
-    @apply border-2;
-}
-.bwhite{
-    @apply my-2 border-2 border-white;
-}
 
-.con-max-w-screen-xl{
-    @apply container py-40 max-w-screen-xl;
-}
-.mx-autocenter{
-    @apply p-4 mx-auto text-center;
-}
-.flexing-center{
-    @apply flex justify-center items-center;
-}
-.akordion{
-    @apply w-full flex justify-between items-center py-5;
-}
-.akordion-icon{
-    @apply text-white transition-transform duration-300;
-}
-.akordion-text{
-    @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
-}
-.alertb{
-    @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
-}
 }
