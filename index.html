@@ -68,164 +68,164 @@
 </head>
 <body style="background-color:#1e1b4b;"> 
   
-  <section class="hero bg-gradient-to-b from-indigo-500 to-indigo-950 h-screen">
-  <div id="navbar" class="w-full text-white bg-transparent fixed transition-all duration-300" style="z-index: 200;">
-    <div x-data="{ open: false }" class="flex flex-col px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 xl:px-12 bg-blue-900/50 backdrop-blur-md"> 
-      <div class="p-4 md:p-0 md:py-6 flex flex-row items-center justify-between">
-        <a href="javascript:void(0)" ><img loading="lazy"   src="./public/assets2/icon/loogo.svg" width="70px" alt=""></a>
-        <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-            <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-            <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </button>
-      </div>
-        <nav :class="{'flex': open, 'hidden': !open}" 
-        x-transition:enter="transition ease-out duration-300" 
-        x-transition:enter-start="opacity-0 transform -translate-y-4"
-        x-transition:enter-end="opacity-100 transform translate-y-0"
-        x-transition:leave="transition ease-in duration-200"
-        x-transition:leave-start="opacity-100 transform translate-y-0"
-        x-transition:leave-end="opacity-0 transform -translate-y-4"
-        class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-    <a class="nav-bar-a" href="javascript:void(0)accordion">Home</a>
-    <a class="nav-bar-a" href="javascript:void(0)">Components</a>
-    <a class="nav-bar-a" href="javascript:void(0)">Documents</a>
-    <a class="nav-bar-a" href="javascript:void(0)">Contact</a>
-    <div @click.away="open = false" class="relative" x-data="{ open: false }">
-      <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline">
-        <span>Dropdown</span>
-        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
-          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+<section class="hero bg-gradient-to-b from-indigo-500 to-indigo-950 h-screen">
+<div id="navbar" class="w-full text-white bg-transparent fixed transition-all duration-300" style="z-index: 200;">
+  <div x-data="{ open: false }" class="flex flex-col px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 xl:px-12 bg-blue-900/50 backdrop-blur-md"> 
+    <div class="p-4 md:p-0 md:py-6 flex flex-row items-center justify-between">
+      <a href="javascript:void(0)" ><img loading="lazy"   src="./public/assets2/icon/loogo.svg" width="70px" alt=""></a>
+      <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
         </svg>
       </button>
-      <div x-show="open" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
-        <div class="px-2 py-2 text-gray-900 bg-white rounded-md shadow">
-          <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="javascript:void(0)">Link #1</a>
-          <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="javascript:void(0)">Link #2</a>
-          <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="javascript:void(0)">Link #3</a>
-        </div>
+    </div>
+      <nav :class="{'flex': open, 'hidden': !open}" 
+      x-transition:enter="transition ease-out duration-300" 
+      x-transition:enter-start="opacity-0 transform -translate-y-4"
+      x-transition:enter-end="opacity-100 transform translate-y-0"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100 transform translate-y-0"
+      x-transition:leave-end="opacity-0 transform -translate-y-4"
+      class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+  <a class="nav-bar-a" href="javascript:void(0)accordion">Home</a>
+  <a class="nav-bar-a" href="javascript:void(0)">Components</a>
+  <a class="nav-bar-a" href="javascript:void(0)">Documents</a>
+  <a class="nav-bar-a" href="javascript:void(0)">Contact</a>
+  <div @click.away="open = false" class="relative" x-data="{ open: false }">
+    <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300 focus:outline-none focus:shadow-outline">
+      <span>Dropdown</span>
+      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+      </svg>
+    </button>
+    <div x-show="open" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+      <div class="px-2 py-2 text-gray-900 bg-white rounded-md shadow">
+        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="javascript:void(0)">Link #1</a>
+        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="javascript:void(0)">Link #2</a>
+        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-blue-300 focus:bg-blue-300" href="javascript:void(0)">Link #3</a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 </div>
 </div>
 
 <div class="con-max-w-screen-xl px-8 md:px-6 lg:px-8  flexing-center mx-auto lg:grid lg:grid-cols-12">
-  <div class="mr-auto place-self-center lg:col-span-7">
-    <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold">Let's Learn HTML<br>
-      <span class="text-blue-300 font-extrabold lg:text-7xl md:text-6xl text-5xl ">Tailwind.</span></h1> <!-- Updated text color -->
-    <p class="max-w-2xl mb-6  text-gray-400 lg:mb-8 md:text-lg lg:text-xl"><span class="text-blue-300">Tailwind CSS</span> is a utility-first CSS framework that allows developers to build custom designs quickly by composing pre-defined classes.</p> <!-- Updated paragraph text color -->
-    <a href="javascript:void(0)" class="inline-flex nav-bar-a   border text-white">
-      Get Started
-    </a> 
-  </div>
-  <div class="hidden lg:mt-0 md:col-span-5 md:flex lg:col-span-5 lg:flex">
-    <img loading="lazy"   src="./public/assets2/header-gambar.svg" alt="">
-  </div>
+<div class="mr-auto place-self-center lg:col-span-7">
+  <h1 class="max-w-2xl mb-4 text-4xl py-5 tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-400 font-semibold">Let's Learn HTML<br>
+    <span class="text-blue-300 font-extrabold lg:text-7xl md:text-6xl text-5xl ">Tailwind.</span></h1> <!-- Updated text color -->
+  <p class="max-w-2xl mb-6  text-gray-400 lg:mb-8 md:text-lg lg:text-xl"><span class="text-blue-300">Tailwind CSS</span> is a utility-first CSS framework that allows developers to build custom designs quickly by composing pre-defined classes.</p> <!-- Updated paragraph text color -->
+  <a href="javascript:void(0)" class="inline-flex nav-bar-a   border text-white">
+    Get Started
+  </a> 
+</div>
+<div class="hidden lg:mt-0 md:col-span-5 md:flex lg:col-span-5 lg:flex">
+  <img loading="lazy"   src="./public/assets2/header-gambar.svg" alt="">
+</div>
 </div>
 </section>
 
-  <section class=" flexing-center ">
-    <div class="con-max-w-screen-xl mx-autocenter">
-  
-      <h1 class="h1-text">
-        Columns <br>
-      </h1>
-      <div class="place-self-center">
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-          <div class=" p-4 teal-5000 text-black">Item 1</div>
-          <div class=" p-4 green-5000 text-black">Item 2</div>
-          <div class=" p-4 teal-5000 text-black">Item 3</div>
-          <div class=" p-4 green-5000 text-black">Item 4</div>
-        </div>
-        <p class="max-w-5xl mb-2 text-lg text-gray-100 mx-auto">
-          For this case, I use <code>grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4</code> in Tailwind CSS. This means:
-          <ul class=" text-left list-disc pl-6">
-            <li class="  mb2-textsm">It will show 4 items per row on screens larger than 1280px (xl breakpoint).</li>
-            <li class="  mb2-textsm">It will show 2 items per row on screens larger than 768px (md breakpoint).</li>
-            <li class="  mb2-textsm">It will show 1 item per row on screens larger than 640px (sm breakpoint).</li>
-            <li class="  mb2-textsm">On screens smaller than 640px, it will also show 1 item per row.</li>
-          </ul>
-        </p>
-        
-        <p class="max-w-5xl mb-2 text-lg text-gray-300 mx-auto">
-          In comparison, Bootstrap's grid system can be achieved using <code>col-12 col-md-6 col-xl-3</code>.
-        </p>
-        
-        <br>
-        <p class="max-w-5xl mb-2 text-lg text-gray-300 mx-auto">
-          <code>grid grid-cols-12 </code> you can change hows the <code>cols</code> works by changing <code>col-span</code> nor <code>grid-cols</code> as you want
-        </p>
-        <div class="grit-cols12 ">
-          <div class="col-span-4 b-2 border-white green-5000 bg-opacity-80 p-4">
-            grid
-          </div>
-          <div class="col-span-4 b-2 border-white teal-5000 bg-opacity-80 p-4">
-            col-span-4
-          </div>
-          <div class="col-span-4 b-2 border-white green-5000 bg-opacity-80 p-4">
-            Column
-          </div>
-        </div>
+<section class=" flexing-center ">
+  <div class="con-max-w-screen-xl mx-autocenter">
 
-        <div class="grit-cols12  my-2">
-          <div class="col-span-1 b-2 border-white bg-green-700 hover:bg-green-600 bg-opacity-80 p-4">
-            1
-          </div>
-          <div class="col-span-11 b-2 border-white bg-teal-700 hover:bg-teal-600 bg-opacity-80 p-4">
-            col-span-11
-          </div>
+    <h1 class="h1-text">
+      Columns <br>
+    </h1>
+    <div class="place-self-center">
+      <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div class=" p-4 teal-5000 text-black">Item 1</div>
+        <div class=" p-4 green-5000 text-black">Item 2</div>
+        <div class=" p-4 teal-5000 text-black">Item 3</div>
+        <div class=" p-4 green-5000 text-black">Item 4</div>
+      </div>
+      <p class="max-w-5xl mb-2 text-lg text-gray-100 mx-auto">
+        For this case, I use <code>grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4</code> in Tailwind CSS. This means:
+        <ul class=" text-left list-disc pl-6">
+          <li class="  mb2-textsm">It will show 4 items per row on screens larger than 1280px (xl breakpoint).</li>
+          <li class="  mb2-textsm">It will show 2 items per row on screens larger than 768px (md breakpoint).</li>
+          <li class="  mb2-textsm">It will show 1 item per row on screens larger than 640px (sm breakpoint).</li>
+          <li class="  mb2-textsm">On screens smaller than 640px, it will also show 1 item per row.</li>
+        </ul>
+      </p>
+      
+      <p class="max-w-5xl mb-2 text-lg text-gray-300 mx-auto">
+        In comparison, Bootstrap's grid system can be achieved using <code>col-12 col-md-6 col-xl-3</code>.
+      </p>
+      
+      <br>
+      <p class="max-w-5xl mb-2 text-lg text-gray-300 mx-auto">
+        <code>grid grid-cols-12 </code> you can change hows the <code>cols</code> works by changing <code>col-span</code> nor <code>grid-cols</code> as you want
+      </p>
+      <div class="grit-cols12 ">
+        <div class="col-span-4 b-2 border-white green-5000 bg-opacity-80 p-4">
+          grid
         </div>
-
-        <div class="grit-cols12  my-2">
-          <div class="col-span-2 b-2 border-white bg-green-600 hover:bg-green-500 bg-opacity-80 p-4">
-            2
-          </div>
-          <div class="col-span-10 b-2 border-white bg-teal-600 hover:bg-teal-500 bg-opacity-80 p-4">
-            col-span-10
-          </div>
+        <div class="col-span-4 b-2 border-white teal-5000 bg-opacity-80 p-4">
+          col-span-4
         </div>
-
-        <div class="grit-cols12  my-2">
-          <div class="col-span-3 b-2 border-white bg-green-500 hover:bg-green-400 bg-opacity-80 p-4">
-            3
-          </div>
-          <div class="col-span-9 b-2 border-white bg-teal-500 hover:bg-teal-400 bg-opacity-80 p-4">
-            col-span-9
-          </div>
+        <div class="col-span-4 b-2 border-white green-5000 bg-opacity-80 p-4">
+          Column
         </div>
+      </div>
 
-        <div class="grit-cols12  my-2">
-          <div class="col-span-4 b-2 border-white bg-green-400 hover:bg-green-300 bg-opacity-80 p-4">
-           4
-          </div>
-          <div class="col-span-8 b-2 border-white bg-teal-400 hover:bg-teal-300 bg-opacity-80 p-4">
-            col-span-10
-          </div>
+      <div class="grit-cols12  my-2">
+        <div class="col-span-1 b-2 border-white bg-green-700 hover:bg-green-600 bg-opacity-80 p-4">
+          1
         </div>
-
-        <div class="grit-cols12  my-2">
-          <div class="col-span-5 b-2 border-white bg-green-300 hover:bg-green-200 bg-opacity-80 p-4">
-            col-span-5
-          </div>
-          <div class="col-span-7 b-2 border-white bg-teal-300 hover:bg-teal-200 bg-opacity-80 p-4">
-            col-span-5
-          </div>
+        <div class="col-span-11 b-2 border-white bg-teal-700 hover:bg-teal-600 bg-opacity-80 p-4">
+          col-span-11
         </div>
+      </div>
 
-        <div class="grit-cols12  my-2">
-          <div class="col-span-6 b-2 border-white bg-green-200 hover:bg-green-200 bg-opacity-80 p-4">
-            col-span-6
-          </div>
-          <div class="col-span-6 b-2 border-white bg-teal-200 hover:bg-teal-200 bg-opacity-80 p-4">
-            col-span-6
-          </div>
+      <div class="grit-cols12  my-2">
+        <div class="col-span-2 b-2 border-white bg-green-600 hover:bg-green-500 bg-opacity-80 p-4">
+          2
+        </div>
+        <div class="col-span-10 b-2 border-white bg-teal-600 hover:bg-teal-500 bg-opacity-80 p-4">
+          col-span-10
+        </div>
+      </div>
+
+      <div class="grit-cols12  my-2">
+        <div class="col-span-3 b-2 border-white bg-green-500 hover:bg-green-400 bg-opacity-80 p-4">
+          3
+        </div>
+        <div class="col-span-9 b-2 border-white bg-teal-500 hover:bg-teal-400 bg-opacity-80 p-4">
+          col-span-9
+        </div>
+      </div>
+
+      <div class="grit-cols12  my-2">
+        <div class="col-span-4 b-2 border-white bg-green-400 hover:bg-green-300 bg-opacity-80 p-4">
+          4
+        </div>
+        <div class="col-span-8 b-2 border-white bg-teal-400 hover:bg-teal-300 bg-opacity-80 p-4">
+          col-span-10
+        </div>
+      </div>
+
+      <div class="grit-cols12  my-2">
+        <div class="col-span-5 b-2 border-white bg-green-300 hover:bg-green-200 bg-opacity-80 p-4">
+          col-span-5
+        </div>
+        <div class="col-span-7 b-2 border-white bg-teal-300 hover:bg-teal-200 bg-opacity-80 p-4">
+          col-span-5
+        </div>
+      </div>
+
+      <div class="grit-cols12  my-2">
+        <div class="col-span-6 b-2 border-white bg-green-200 hover:bg-green-200 bg-opacity-80 p-4">
+          col-span-6
+        </div>
+        <div class="col-span-6 b-2 border-white bg-teal-200 hover:bg-teal-200 bg-opacity-80 p-4">
+          col-span-6
         </div>
       </div>
     </div>
   </div>
-  </section>
+</div>
+</section>
 
 <section class="flexing-center min-h-3">
   <div class="container max-w-screen-xl mx-autocenter grid grid-cols-1">
